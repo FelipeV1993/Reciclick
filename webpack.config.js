@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
     entry: './src/index.js',
@@ -55,6 +56,12 @@ module.exports = {
         }),
 
         new CleanWebpackPlugin(),
+        new CopyPlugin({
+            patterns: [
+              { from: "source", to: "dest" },
+              { from: "assets", to: "public" },
+            ],
+          }),
     ],
     optimization: {
         minimize: true,
@@ -64,3 +71,4 @@ module.exports = {
         ]
     }
 }
+

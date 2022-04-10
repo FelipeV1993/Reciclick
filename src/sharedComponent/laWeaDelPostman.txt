@@ -1,0 +1,300 @@
+987653215 // numero omar
+
+{
+    "info": {
+        "_postman_id": "cd966ba1-6a78-4740-9f4e-c9f655a48e95",
+        "name": "Reciclick",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "auth",
+            "item": [
+                {
+                    "name": "logout",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": []
+                        },
+                        "url": {
+                            "raw": "{{local}}/auth/logout",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "logout"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "login",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "email",
+                                    "value": "admin@root.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "@Admin@123456@",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/auth/login",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "login"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Create Client",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "run",
+                                    "value": "22060449-7",
+                                    "type": "text",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "client1@client.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "@Client@123456@",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "firstName",
+                                    "value": "Franco",
+                                    "type": "text",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "lastName",
+                                    "value": "Alvarado",
+                                    "type": "text",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "gender",
+                                    "value": "male",
+                                    "type": "text",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "birthDate",
+                                    "value": "2000-07-12",
+                                    "type": "text",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "empresa",
+                                    "value": "baobab",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "city",
+                                    "value": "santiago",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "razonSocial",
+                                    "value": "Desarrollo Tecnológico",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/auth/register",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "register"
+                            ],
+                            "query": [
+                                {
+                                    "key": "car",
+                                    "value": "toyota",
+                                    "disabled": true
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "activateAccount",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "email",
+                                    "value": "root@root.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "activationCode",
+                                    "value": "999927",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{host}}/auth/activate_account",
+                            "host": [
+                                "{{host}}"
+                            ],
+                            "path": [
+                                "auth",
+                                "activate_account"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Client",
+            "item": [
+                {
+                    "name": "Get Clients",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{local}}/clients",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "clients"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Client By Id",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{local}}/clients/2",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "clients",
+                                "2"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Partial Update Client",
+                    "request": {
+                        "method": "PATCH",
+                        "header": [],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "firstName",
+                                    "value": "Baobab",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "lastName",
+                                    "value": "Dev",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{local}}/clients/1",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "clients",
+                                "1"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "DELETE Client",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{local}}/clients/2",
+                            "host": [
+                                "{{local}}"
+                            ],
+                            "path": [
+                                "clients",
+                                "2"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ],
+            "event": [
+                {
+                    "listen": "prerequest",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                },
+                {
+                    "listen": "test",
+                    "script": {
+                        "type": "text/javascript",
+                        "exec": [
+                            ""
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

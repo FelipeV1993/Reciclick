@@ -1,18 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-//import './styles/global.scss';
-
-import "@css/bootstrap.min.css"
-import "@css/bootstrap-extended.min.css"
-import "@css/colors.css"
-import "@css/components.css"
-import "@css/style.css"
-
-import "@js/core/app-menu.js"
-//import "@js/core/app.js"
-//import "@js/scripts/customizer.js"
-import "@js/scripts/pages/sk-content-sidebar.js"
+import ReactDOm from 'react-dom';
+import App from './App';
 
 
-ReactDOM.render(<App />, document.getElementById('app'));
+
+const divRoot =document.querySelector('#app');//div root es la referemcia a la que se llega por la id de queri selector
+ReactDOm.render(<App />,divRoot);//.render, renderiza o muestra esto tiene 2 argumentos, lo que queremos mostrar seguido de donde lo queremos mostrar, en este caso divroot nos lleva al index.html en la carpeta public gracias a queryselector y lo encuentra por la id en div id
+
+

@@ -115,7 +115,7 @@ export default function AlertModal() {
                                 <Box sx={{ mt: 4, mb: 3 }}>
                                     <img src={logo} width={newLocal} alt="Reciclick" />
                                 </Box>
-                                <h3>¡Bienvenido a Reciclick!</h3>
+                                <h3>Bienvenido a Reciclick</h3>
                                 
                                 <Box sx={{ mt: 2, mb: 2 }}>    
                                     <TextField
